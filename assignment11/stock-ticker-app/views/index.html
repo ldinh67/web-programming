@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Lookup</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="window">
+    <div class="title-bar">
+      <div class="title-bar-text">Stock Lookup</div>
+      <div class="title-bar-controls">X</div>
+    </div>
+
+    <div class="window-body">
+      <form action="/process" method="GET">
+        <label for="query">Search</label>
+        <input type="text" id="query" name="query" placeholder="Company or ticker" required>
+
+        <div class="radio-group">
+          <label><input type="radio" name="type" value="company" checked> Company</label>
+          <label><input type="radio" name="type" value="ticker"> Ticker</label>
+        </div>
+
+        <div class="button-row">
+          <button type="submit">Ok</button>
+          <button type="button" id="cancelBtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("cancelBtn").addEventListener("click", function () {
+      document.getElementById("query").value = "";
+    });
+  </script>
+</body>
+</html>
