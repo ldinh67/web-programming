@@ -13,7 +13,7 @@ const dbName = "Stock";
 app.use(express.static(__dirname + '/stock-ticker-app/public'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/stock-ticker-app/views/index.html');
+  res.sendFile(__dirname + '/views/index.html');
 });
 
 app.get('/process', async (req, res) => {
