@@ -10,7 +10,7 @@ const twelveKey = process.env.TWELVE_DATA_API_KEY;
 const client = new MongoClient(uri);
 const dbName = "Stock";
 
-app.use(express.static(__dirname + '/stock-ticker-app/public'));
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
